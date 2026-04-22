@@ -1,34 +1,7 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Realtime Dashboard</title>
-</head>
-<body>
-    <h1>📊 Dashboard</h1>
-
-    <p>Temperature: <span id="temp">0</span> °C</p>
-    <p>Object Count: <span id="count">0</span></p>
-
-    <script>
-        const API = "http://192.168.0.122:5000/data";
-
-        async function fetchData() {
-            const res = await fetch(API);
-            const data = await res.json();
-
-            document.getElementById("temp").innerText = data.temperature;
-            document.getElementById("count").innerText = data.object_count;
-        }
-
-        setInterval(fetchData, 1000);
-    </script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
 <body>
     <h1>YOLO Stream</h1>
-    <img src="http://192.168.0.122:5000/video" width="640">
+    <img src="http://192.168.0.124:5000/video" width="640">
 </body>
 </html>
