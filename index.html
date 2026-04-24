@@ -3,5 +3,19 @@
 <body>
     <h1>YOLO Stream</h1>
     <img src="http://192.168.0.124:5000" width="640">
+
+    <h2>GPS Data</h2>
+    <p id="gps">Loading...</p>
+
+    <script>
+        setInterval(() => {
+            fetch("/gps")
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("gps").innerText =
+                        "Lat: " + data.lat + ", Lng: " + data.lng;
+                });
+        }, 1000);
+    </script>
 </body>
 </html>
