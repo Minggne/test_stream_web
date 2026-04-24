@@ -9,7 +9,7 @@
 
     <script>
         setInterval(() => {
-            fetch("http://192.168.1.122:5000/gps")
+            fetch("http://192.168.0.122:5000/gps")
                 .then(res => res.json())
                 .then(data => {
                     document.getElementById("gps").innerText =
