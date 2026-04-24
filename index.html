@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>GPS Tracker</title>
+</head>
 <body>
-    <h1>YOLO Stream</h1>
-    <img src="http://192.168.0.124:5000" width="640">
-
     <h2>GPS Data</h2>
     <p id="gps">Loading...</p>
 
     <script>
         setInterval(() => {
-            fetch("/gps")
+            fetch("http://192.168.1.122:5000/gps")
                 .then(res => res.json())
                 .then(data => {
                     document.getElementById("gps").innerText =
