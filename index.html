@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>GPS Tracker</title>
-</head>
 <body>
-    <h2>GPS Data</h2>
-    <p id="gps">Loading...</p>
-
-    <script>
-        setInterval(() => {
-            fetch("http://192.168.1.13:5000/gps")
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById("gps").innerText =
-                        "Lat: " + data.lat + ", Lng: " + data.lng;
-                });
-        }, 1000);
-    </script>
+    <h1>YOLO Stream</h1>
+    <img src="http://192.168.0.122:5000/video" width="640">
 </body>
 </html>
